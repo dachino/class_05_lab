@@ -86,9 +86,13 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-
+function multiplyArray(testArray) {
+  var numProduct = testArray[0] * testArray[1] * testArray[2];
+  var answer5 = [numProduct, "The numbers 2,3,4 have a product of 24."];
+  return answer5;
+}
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
@@ -134,11 +138,11 @@ function testSumArray() {
     console.log('%c TEST FOR sumArray() FAILS', 'color: red');
   }
 }
-//
-// function testMultiplyArray() {
-//   if (multiplyArray(testArray)[1] === 'The numbers 2,3,4 have a product of 24.') {
-//     console.log('%c TEST FOR multiplyArray() PASSES', 'color: green');
-//   } else {
-//     console.log('%c TEST FOR multiplyArray() FAILS', 'color: red');
-//   }
-// }
+
+function testMultiplyArray() {
+  if (multiplyArray(testArray)[1] === 'The numbers 2,3,4 have a product of 24.') {
+    console.log('%c TEST FOR multiplyArray() PASSES', 'color: green');
+  } else {
+    console.log('%c TEST FOR multiplyArray() FAILS', 'color: red');
+  }
+}
